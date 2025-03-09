@@ -1,0 +1,325 @@
+                    DAY 1
+
+@001
+package arrayLesson;
+
+import java.util.Arrays;
+
+public class Array1 {
+    public static void main(String[] args) {
+        String [] names = {"ze" , "zi" , "zo"};
+        System.out.println(Arrays.toString(names));
+    }
+}
+
+@002
+package arrayLesson;
+
+public class Array1 {
+    public static void main(String[] args) {
+        String [] names = {"ze" , "zi" , "zo"};
+        //  foreach
+        for (String name: names){
+            System.out.println(name);
+        }
+    }
+}
+
+@003
+package arrayLesson;
+
+public class Array1 {
+    public static void main(String[] args) {
+        String [] names = new String[3];
+        names [0] = "ze";
+        names [1] = "zi";
+        names [2] = "zo";
+        System.out.println("Array size: " + names.length);
+        for(int i = 0; i < names.length; i++){
+            System.out.println(names[i]);
+        }
+    }
+}
+
+@004
+package arrayLesson;
+
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Array1 {
+    public static void main(String[] args) {
+        System.out.print("Insert the number of element: ");
+        int number = new Scanner(System.in).nextInt();
+        String [] names = new String [number];
+        for(int i = 0; i < number; i++){
+            System.out.print("Insert name [ " + i + " ]: " );
+            names [i] = new Scanner(System.in).nextLine();
+        }
+        System.out.println("All names");
+        System.out.println(Arrays.toString(names));
+    }
+}
+
+@005 (Update new name)
+package arrayLesson;
+
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Array1 {
+    public static void main(String[] args) {
+        System.out.print("Insert the number of element: ");
+        int number = new Scanner(System.in).nextInt();
+        String [] names = new String [number];
+        for(int i = 0; i < number; i++){
+            System.out.print("Insert name [ " + i + " ]: " );
+            names [i] = new Scanner(System.in).nextLine();
+        }
+        System.out.println("All names");
+        System.out.println(Arrays.toString(names));
+        System.out.print("Insert old name to update: ");
+        String oldName = new Scanner(System.in).nextLine();
+        for(int i = 0; i < names.length; i++){
+            if (names[i].equals(oldName)){
+            System.out.print("Insert new name to update: ");
+            String newName = new Scanner(System.in).nextLine();
+            names [i] = newName;
+            }
+        }
+        System.out.print("Update names: ");
+        System.out.print(Arrays.toString(names));
+    }
+}
+
+@006 (Delete element)
+package arrayLesson;
+
+
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Array1 {
+    public static void main(String[] args) {
+        System.out.println("All numbers");
+        Integer [] number = {1,2,3,4};
+        System.out.println(Arrays.toString(number));
+        System.out.print("Insert any element to delete: ");
+        int deleteNumber = new Scanner(System.in).nextInt();
+        for (int i=0; i<number.length; i++){
+            if (number[i]==deleteNumber){
+                number[i] = null;
+            }
+        }
+        System.out.println("All elements after deleted");
+        for (Integer n: number){
+            if(n!=null){
+                System.out.println(n);
+            }
+        }
+    }
+}
+                DAY 2
+@01
+package arrayLesson;
+
+public class Array2 {
+    public static void main(String[] agrs){
+        String[] names = {"ze","zo","123"};
+        System.out.println("Old name: " + names[0]);
+        names [0] = "zi";
+        System.out.println("New name: " + names[0]);
+    }
+}
+@02
+//Bubble sort
+import java.util.Arrays;
+
+public class Array2 {
+    public static void main(String[] args){
+        int [] num = {-2,5,86,23,-46,25};
+        System.out.println(Arrays.toString(num));
+        //Another method to sort
+        //Arrays.sort(num);
+        //System.out.println(Arrays.toString(num));
+        for(int i = 0; i < num.length; i++){
+            for(int j = 0; j < num.length-1; j++){
+                if(num[j] > num[j+1]){
+                    int temp = num [j];
+                    num[j] = num [j+1];
+                    num [j+1] = temp;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(num));
+    }
+}
+@03
+package arrayLesson;
+
+public class Array2 {
+    public static void main(String[] args){
+        Integer [] ages = {20,53,54,76,23,13,20,54};
+        for(int i = 0; i < ages.length; i++){
+            for(int j = i+1; j < ages.length; j++){
+                if(ages[i]==ages[j]){
+                    System.out.println(ages[i]);
+                }
+            }
+        }
+    }
+}
+@04
+package arrayLesson;
+
+import java.util.Arrays;
+
+public class Array2 {
+    public static void main(String[] args){
+        String [] name = {"zo","zi","loki","zo","co","Loki"};
+        System.out.println(Arrays.toString(name));
+        for(int i = 0; i < name.length; i++){
+            for(int j = i+1; j< name.length; j++){
+                if(name [i].equalsIgnoreCase(name [j])){
+                    System.out.println("Duplicate name: " + name[i]);
+                }
+            }
+        }
+    }
+}
+@05
+package arrayLesson;
+
+import java.util.Scanner;
+
+//Math.max()
+public class Array2 {
+    public static void main(String[] args){
+        System.out.print("Insert the length of array: ");
+        int n = new Scanner(System.in).nextInt();
+        Integer [] num = new Integer[n];
+        for(int i = 0; i<num.length; i++){
+            System.out.print("Insert the element " + i + " :");
+            num [i] = new Scanner(System.in).nextInt();
+        }
+        int max = num [0];
+        for(int a : num){
+            if(max < a){
+                max = a;
+            }
+        }
+        System.out.println("The maximum number is " + max);
+    }
+}
+@06
+package arrayLesson;
+
+public class Array2 {
+    public static void main(String[] args){
+        Integer [][] matrix = {{1,2},{3}};
+        System.out.println("Row of matrix: " + matrix.length);
+        System.out.println("Column number of first row: " + matrix[0].length);
+        System.out.println("Column number of second row: " + matrix[1].length);
+    }
+}
+@07
+2D matrix
+package arrayLesson;
+
+public class Array2 {
+    public static void main(String[] args){
+        String [][] names = {{}, {"a","b","c"},{"d"}};
+        System.out.println("Row of matrix: " + names.length);
+        System.out.println("1st columns of matrix: " + names[0].length);
+        System.out.println("2nd columns of matrix: " + names[1].length);
+        System.out.println("3rd columns of matrix: " + names[2].length);
+                                    Other method
+//        int [][] matrix = new int [3][];
+//        matrix [0] = new int [0];
+//        matrix [1] = new int [3];
+//        matrix [2] = new int [1];
+//        System.out.println("Row of matrix: " + matrix.length);
+//        System.out.println("Column of the first matrix: " + matrix[0].length);
+//        System.out.println("Column of the second matrix: " + matrix[1].length);
+//        System.out.println("Column of the third matrix: " + matrix[2].length);
+    }
+}
+@08
+package arrayLesson;
+
+public class Array2 {
+    public static void main(String[] args){
+        String [][] names = {
+                {},
+                {"Sun", "Winning", "Chou"},
+                {"Sal", "Rak", "Rotha"},
+                {"Pheak"},
+                {"Rek"}
+        };
+        for(int i=0; i < names.length; i++) {
+            System.out.print("Row: " + (i + 1) + " ");
+            for (int j = 0; j < names[i].length; j++) {
+                System.out.print(names[i][j] + " | ");
+            }
+            System.out.println();
+        }
+    }
+}
+@09
+package arrayLesson;
+
+import java.util.Scanner;
+
+public class Array2 {
+    public static void main(String[] args){
+        System.out.print("Insert number of row: ");
+        int numberRow = new Scanner(System.in).nextInt();
+        System.out.print("Insert number of column: ");
+        int numberColumn = new Scanner(System.in).nextInt();
+        String [][] hall = new String[numberRow][numberColumn];
+        char characterSeat = 'A';
+        int seatCode = 1;
+        for(int i=0; i<hall.length; i++){
+            seatCode = 1;
+            for(int j=0; j<hall[i].length; j++){
+                hall[i][j] = characterSeat + "-" + seatCode + " : AV";
+                seatCode++;
+            }
+            characterSeat++;
+        }
+        for(int i=0; i<hall.length; i++){
+            for(int j=0; j<hall[i].length; j++){
+                if (j==0){
+                    System.out.print("| ");
+                }
+                System.out.print(hall[i][j] + " | ");
+            }
+            System.out.println();
+        }
+        //for booking
+        System.out.print("Insert seat code to book (A-1, B-1): ");
+        String code = new Scanner(System.in).nextLine();
+        code = code.trim();
+        // start checking entered seat code
+        for(int i=0; i < hall.length; i++){
+            for(int j=0; j < hall[i].length; j++){
+                String [] splitCode = hall[i][j].split(" : ");
+                if(splitCode[0].equalsIgnoreCase(code)){
+                    hall[i][j] = splitCode[0] + " : BO";
+                }
+            }
+        }
+        // showing hall
+        for (int i=0; i < hall.length; i++){
+            for(int j=0; j < hall[i].length; j++){
+                if (j==0) {
+                    System.out.print("| ");
+                }
+                System.out.print(hall[i][j] + " | ");
+            }
+            System.out.println();
+        }
+    }
+}

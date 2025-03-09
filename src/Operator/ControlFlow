@@ -1,0 +1,194 @@
+Control flow statements or Decision making
+NOTE : || stands for or
+       && stand for and
+Use break; to stop operation
+
+\n means new line
+@001
+package Operator;
+
+import java.util.Scanner;
+
+public class ControlFlow {
+    public static void main(String[] args) {
+        System.out.print("Insert your age: ");
+        int age = new Scanner(System.in).nextInt();
+        if (age >= 18){
+            System.out.print("You are able to vote.");
+        } else {
+            System.out.print("Tv dek tas tv ot ton krob ah yuk 😼");
+        }
+    }
+}
+
+@002
+package Operator;
+
+import java.util.Scanner;
+
+public class ControlFlow {
+    public static void main(String[] args) {
+        Scanner Scanner = new Scanner(System.in);
+        double math, english, khmer;
+        System.out.print("Insert Math score: ");
+        math = Scanner.nextDouble();
+        System.out.print("Insert English score: ");
+        english = Scanner.nextDouble();
+        System.out.print("Insert Khmer score: ");
+        khmer = Scanner.nextDouble();
+        double avg = (math+english+khmer)/3;
+        if (avg <= 100 || avg >= 90){
+            System.out.println("You got grade A");
+        } else{
+            System.out.println("You fail");
+        } ETC........
+    }
+}
+
+@003
+package Operator;
+
+import java.util.Scanner;
+
+public class ControlFlow {
+    public static void main(String[] args) {
+        System.out.println("Insert option: ");
+        int num = new Scanner(System.in).nextInt();
+        switch (num){
+            case 1: {
+                System.out.print("This is option 1.");
+                break;
+            }
+            case 2:{
+                System.out.print("This is option 2.");
+                break;
+            }
+            case 3:{
+                System.out.print("This is option 3.");
+                break;
+            }
+            default:{
+                System.out.print("No more options.");
+            }
+        }
+    }
+}
+
+@004
+package Operator;
+
+import java.util.Scanner;
+
+public class ControlFlow {
+    public static void main(String[] args) {
+        System.out.println("=".repeat(6) + " Welcome to my Mart " + "=".repeat(6));
+        System.out.println("List all products");
+        System.out.println("Add new products");
+        System.out.println("Search Products by code");
+        System.out.println("Delete Product");
+        System.out.println("=".repeat(30));
+        /**
+         * System.out.println("""
+         * .......
+         * """)
+         */
+        Scanner Scanner = new Scanner(System.in);
+        int num = Scanner.nextInt();
+        switch (num){
+            case 1: {
+                System.out.println("List all Products");
+                break;
+            }
+            /**
+             * or you can write
+             * case 1 -> System.out.println("List all products");
+             * break;
+             */
+            case 2:{
+                System.out.print("Add new Products");
+                break;
+            }
+            case 3:{
+                System.out.print("Search Products by code");
+                break;
+            }
+            case 4: {
+                System.out.println("Delete Product.");
+                break;
+            }
+            default:{
+                System.out.print("No more options.");
+            }
+        }
+    }
+}
+
+@005
+package Operator;
+
+public class ControlFlow {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++){
+            try{
+                Thread.sleep(500);
+                System.out.println("Hello World");
+            }catch (Exception ignore){}
+        }
+    }
+}
+
+@006
+package Operator;
+
+import java.util.Scanner;
+
+public class ControlFlow {
+    public static void main(String[] args) {
+        System.out.print("Insert your name: ");
+        String name = new Scanner(System.in).nextLine();
+        if(name.equalsIgnoreCase("ze")){
+            System.out.println(name + " has been allowed.");
+        } else{
+            System.out.println("You are not allowed.");
+        }
+    }
+}
+
+@007
+package Operator;
+public class ControlFlow {
+    public static void main(String[] args) {
+        for (int i = 0; i < 50; i++){
+            System.out.println(i);
+            if (i % 2 == 0){
+                System.out.println("Even");
+            } else {
+                System.out.println("Odd");
+            }
+        }
+    }
+}
+
+@008
+package Operator;
+
+import java.util.Scanner;
+
+public class ControlFlow {
+    public static void main(String[] args) throws InterruptedException {
+        System.out.print("Insert range of number: ");
+        int a = new Scanner(System.in).nextInt();
+        int numberOfOdd = 0;
+        int numberOfEven = 0;
+        for (int i = 1; i <= a; i++){
+            if(i % 2 == 0){
+                numberOfEven++;
+            }  else {
+                numberOfOdd++;
+            }
+        }
+        System.out.println("Range of number from ( 1 to " + a + " ) has odd and even number");
+        System.out.println("Even: " + numberOfEven);
+        System.out.println("Odd: "+ numberOfOdd);
+    }
+}

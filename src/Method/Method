@@ -1,0 +1,220 @@
+Method is a collection of statements that are grouped together to perform a specific task.
+
+@01
+package Method;
+
+public class Method1 {
+    public static void thumbnail(){
+        System.out.println("=".repeat(26));
+        System.out.println("    Welcome to my mart");
+        System.out.println("=".repeat(26));
+        System.out.println("""
+                1. List all product
+                2. Insert new product
+                3. Update Product
+                4. Delete
+                5. Exit
+                """
+        );
+    }
+    public static void  printMessage(){
+        System.out.println("   hello mak mean ka ei?");
+    }
+    public static void main(String[] args){
+        printMessage();
+        thumbnail();
+    }
+}
+@02
+package Method;
+
+import java.util.Scanner;
+public class Method1 {
+    public static void sum(){
+        System.out.print("Insert number A: ");
+        int a = new Scanner(System.in).nextInt();
+        System.out.print("Insert number B: ");
+        int b = new Scanner(System.in).nextInt();
+        System.out.print("The sum of number A and B is: " + (a+b));
+    }
+    public static void main(String[] args){
+        sum();
+    }
+}
+@03
+package Method;
+
+public class Method1 {
+    public static void sum(int a, int b){
+        System.out.print("The sum of number A and B is: " + (a+b));
+    }
+    public static void main(String[] args){
+        sum(2,3);
+    }
+}
+@04
+package Method;
+
+public class Method1 {
+    public static void sum(int[] array){
+        int sum = 0;
+        for(int a : array){
+            sum+=a;
+        }
+        System.out.println("The sum of array = " + sum );
+    }
+    public static void main(String[] args){
+        sum(new int [] {1,2,3});
+    }
+}
+@05
+package Method;
+
+public class Method1 {
+    public static void duplicate(int[] array){
+        for(int i = 0; i < array.length; i++){
+            for (int j=i+1; j < array.length; j++){
+                if(array[i]==array[j]){
+                System.out.println("Found duplicated: " +  array[i]);
+                }
+            }
+        }
+    }
+    public static void main(String[] args){
+        duplicate(new int [] {1,2,3,4,3,5,1});
+    }
+}
+@06
+package Method;
+
+public class Method1 {
+    public static void sum(int...a){
+        int sum = 0;
+        for(int n : a){
+            sum+=n;
+        }
+        System.out.println("Sum: " + sum);
+    }
+    public static void main(String[] args){
+    sum(0);
+    sum(1,2);
+    sum(1,2,3,4,5,5);
+    }
+}
+@07
+package Method;
+import java.util.Scanner;
+public class Method1 {
+    public static int sum(){
+        System.out.print("Insert a: ");
+        int a = new Scanner(System.in).nextInt();
+        System.out.print("Insert b: ");
+        int b = new Scanner(System.in).nextInt();
+        return a+b;
+    }
+    public static void main(String[] args){
+        int result = sum();
+        System.out.print("Sum: " + result);
+    }
+}
+@08
+package Method;
+import java.util.Scanner;
+public class Method1 {
+    public static String thumbNail(){
+        return """
+                =======================
+                 Welcome to khmer mart
+                =======================
+                 1. List all product
+                 2. Insert new product
+                 3. Update Product
+                 4. Delete
+                 5. Exit
+                """;
+    }
+    public static void main(String[] args){
+        String thumb = thumbNail();
+        System.out.print(thumb);
+    }
+}
+@09
+
+            Method Overloading (Methods have the same name)
+
+package Method;
+public class Method1 {
+    public static void main(String[] args){
+        int resultOfSum = sum(1,2);
+        int resultOfNewSum = sum(1,3,4,6);
+        System.out.println("Sum = " + resultOfSum);
+        System.out.println("New sum = " + resultOfNewSum);
+    }
+    public static int sum(int a, int b){
+        return a+b;
+    }
+    public static int sum(int ...number){
+        int sum = 0;
+        for(int a: number)
+            sum = sum + a;
+        return sum;
+    }
+}
+@10
+package Method;
+import java.util.Arrays;
+public class Method1 {
+    private static String[] mySpilt(String data, String delimiter){
+        return data.split(delimiter);
+    }
+    public static void main(String[] args) {
+        String data = "Hello, World";
+        String[] resultOfSplit = mySpilt(data,",");
+        System.out.println(Arrays.toString(resultOfSplit));
+        System.out.println(resultOfSplit[0]);
+    }
+}
+@11
+package Method;
+
+public class Method1 {
+    private static int sum(int a, int b){
+        return a+b;
+    }
+    private static double sum(double a, double b){
+        return a+b;
+    }
+    private static float sum(float a, float b){
+        return a+b;
+    }
+    public static void main(String[] args) {
+       sum(12,24);
+       sum(12.4,125.3);
+       float a = 3214.5f, b = 424.6543f;
+       sum(a,b);
+    }
+}
+@12
+package Method;
+
+public class Method1 {
+    private static int sum(int a, int b){
+        return a+b;
+    }
+    private static double sum(double a, double b){
+        return a+b;
+    }
+    private static float sum(float a, float b){
+        return a+b;
+    }
+    public static void main(String[] args) {
+       sum(12,24);
+        System.out.println(sum(12,24));;
+       sum(12.4,125.3);
+        System.out.println(sum(12.4,125.3));
+       float a = 3214.5f, b = 424.6543f;
+       sum(a,b);
+        System.out.println(sum(a,b));
+    }
+}
+@13

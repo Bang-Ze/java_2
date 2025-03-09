@@ -1,0 +1,189 @@
+Shortcut for public static void main(String[] args) {}
+We use psvm or main
+
+//comment class for 1 line
+/** also comment class but multiple lines
+Primitive data type
+example : short, long, char, float etc...
+
+Wrapper class
+//Method to change variable (Use capital letter)
+Example : Short, Long, Character, Float, Double, Byte, Integer etc...
+Sample
+Short myNewAge = 23;
+double result = myNewAge.doubleValue();
+System.out.println(result);
+// In this case you will get 23.0 instead of 23
+
+**enum (store a stable variable)
+//promotion (convert small data type to big data type)
+Example :
+int avg = 2;
+double newAvg = avg;
+//casting (convert big data type to small data type)
+Example :
+double price = 12.3;
+int singlePrice = (int) price;
+//auto-boxing
+int primitive = 100;
+Integer newWrapper = primitive;
+//unboxing
+Double doubleOfWrapper = 34.4;
+double primitiveDouble = doubleOfWrapper;
+
+***/
+ int a = 2;
+        int b = 5;
+        //arithmetic operation
+        int sum = a+b;
+        int sub = a-b;
+        double div = a/b;
+        int multiply = a*b;
+        //assignment operator
+        int c = 3;
+        int d = 4;
+/***
+
+Today lesson
+@@@ 01
+import java.util.Scanner;
+
+public class Variable.variableLesson {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Insert student's name: ");
+        String studentName = scanner.nextLine();
+        System.out.print("Insert Math score: ");
+        Double mathScore = scanner.nextDouble();
+        System.out.print("Insert Khmer score: ");
+        Double khmerScore = scanner.nextDouble();
+        System.out.print("Insert English score: ");
+        Double englishScore = scanner.nextDouble();
+        Double avg = (mathScore + khmerScore + englishScore)/3;
+        System.out.println("=".repeat(20));
+        System.out.println("student's name: "+ studentName);
+        System.out.println("Student's average: " + avg);
+    }
+}
+
+@@@ 02
+class User{
+    public int id;
+    public String name;
+    public String email;
+}
+enum Status{
+    FAILED,
+    SUCCESS
+}
+public class Variable.variableLesson {
+    public static void main(String[] args) {
+        Status status = Status.SUCCESS;
+        System.out.println(status);
+        User user = new User();
+        user.id = 12;
+        user.name = "ze";
+        user.email = "ze@gmail.com";
+        System.out.println(user.name);
+    }
+}
+@@@ 03
+public class Variable.variableLesson {
+    public static void main(String[] args) {
+        //promotion (convert small data type to big data type)
+        //Example :
+        int avg = 2;
+        double newAvg = avg;
+        //casting (convert big data type to small data type)
+        //Example :
+        double price = 12.3;
+        int singlePrice = (int) price;
+//auto-boxing
+        int primitive = 100;
+        Integer newWrapper = primitive;
+//unboxing
+        Double doubleOfWrapper = 34.4;
+        double primitiveDouble = doubleOfWrapper;
+        System.out.println(newAvg + singlePrice + newWrapper + primitiveDouble);
+    }
+}
+
+@@@ 04
+/****
+ * <h1>User Class<h1/>
+ * <p>This class is used for creating user object.</p>
+ * <img width="1000" height="1000" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtlSPH-34KFRaKOv-syHy0BL0rQPgFTAWwfA&s"/>
+ * @author = ZE
+ * @version = 2.0
+ */
+public class Variable.variableLesson {
+    public static void main(String[] args) {
+
+    }
+}
+
+@@@ 05
+import java.util.Scanner;
+
+public class Variable.variableLesson {
+    public static void main(String[] args) {
+        //relationship operator or comparison operator
+        System.out.print("insert a: ");
+        int a = new Scanner(System.in).nextInt();
+        System.out.print("Insert b: ");
+        int b = new Scanner(System.in).nextInt();
+        System.out.println("A > B: " + (a > b));
+        System.out.println("A < B: " + (a < b));
+        System.out.println("A >= B: " + (a >= b));
+        System.out.println("A < B: " + (a <= b));
+        System.out.println("A != B: " + (a != b));
+        System.out.println("A == B: " + (a == b));
+    }
+}
+
+@@@ 06
+public class Variable.variableLesson {
+    public static void main(String[] args) {
+        float a = 2;
+        System.out.println((a++/2));//1
+        System.out.println((a++/2));//1.5
+        System.out.println((++a)/2);//2.5
+        System.out.println(a);
+    }
+}
+
+@@@ 07
+import java.util.Scanner;
+
+public class Variable.variableLesson {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Insert Math score: ");
+        double mathScore = scanner.nextDouble();
+        System.out.print("Insert Khmer score: ");
+        double khmerScore = scanner.nextDouble();
+        System.out.print("Insert English score: ");
+        double englishScore = scanner.nextDouble();
+        System.out.print("Insert Physic score: ");
+        double physicScore = scanner.nextDouble();
+        double result = mathScore+khmerScore+englishScore+physicScore;
+        double avg = (mathScore+khmerScore+englishScore+physicScore)/4;
+        System.out.println(result);
+        System.out.println(avg);
+        if (avg>=90){
+            System.out.println("Grade A");
+        } else if (avg>=80) {
+            System.out.println("Grade B");
+        } else if (avg>=70) {
+            System.out.println("Grade C");
+        } else if (avg>=60) {
+            System.out.println("Grade D");
+        } else if (avg>=50) {
+            System.out.println("Grade E");
+        } else {
+            System.out.println("Rean mdg tt tv");
+            System.out.println("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtlSPH-34KFRaKOv-syHy0BL0rQPgFTAWwfA&s");
+        }
+    }
+}
+

@@ -1,0 +1,321 @@
+@01
+package CollectionOfFramework;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CollectionOfFramework01 {
+    public static void main(String[] args){
+        ArrayList<Integer> integerArrayList
+                = new ArrayList<>(List.of(1,2,3,4,5,6,7,4,2,2));
+        integerArrayList.add(4);
+        integerArrayList.add(7);
+//adding new element to arrayList by specified index
+        integerArrayList.add(1,23);
+        System.out.println(integerArrayList);
+    }
+}
+@02
+package CollectionOfFramework;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CollectionOfFramework01 {
+    public static void main(String[] args){
+        ArrayList<Integer> integerArrayList
+                = new ArrayList<>(List.of(1,2,3,4,5,6,7,4,2,2));
+        System.out.println(integerArrayList);
+        integerArrayList.add(4);
+        integerArrayList.add(7);
+        //adding element to arrayList by specified index
+        integerArrayList.add(1,23);
+        System.out.println(integerArrayList);
+        //remove element from arrayList by specified index
+        integerArrayList.remove(1);
+        System.out.println(integerArrayList);
+        // replace/update element in arrayList using index
+        integerArrayList.set(0,200);
+        System.out.println(integerArrayList);
+        System.out.println(integerArrayList.getFirst());
+        // or System.out.println(integerArrayList.get(0));
+        System.out.println(integerArrayList.getLast());
+        System.out.println(integerArrayList.get(1));
+        integerArrayList.forEach(e-> System.out.println(e));
+    }
+}
+@03
+package CollectionOfFramework;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class CollectionOfFramework01 {
+    public static void main(String[] args){
+        ArrayList<String> names = new ArrayList<>();
+        System.out.print("Insert number of name: ");
+        int n = new Scanner(System.in).nextInt();
+        for(int i = 0; i < n; i++){
+            System.out.print("Insert name " + (i+1) + ": ");
+            String name = new Scanner(System.in).nextLine();
+            //add name to arrayList
+            names.add(name);
+        }
+        names.forEach(e-> System.out.println("Name: " + e));
+        System.out.print("Insert name to delete: ");
+        String name = new Scanner(System.in).nextLine();
+        int index = name.indexOf(name); // find index of element
+        if(index>=0){
+            names.remove(index); // remove by index
+            System.out.println("Remove name " + name + " successfully.");
+            names.forEach(System.out::println);
+        } else {
+            System.out.println("Name not found.");
+        }
+    }
+}
+@04
+package CollectionOfFramework;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class CollectionOfFramework01 {
+    public static void main(String[] args){
+        ArrayList<String> names = new ArrayList<>();
+        System.out.print("Insert number of name: ");
+        int n = new Scanner(System.in).nextInt();
+        for(int i = 0; i < n; i++){
+            System.out.print("Insert name " + (i+1) + ": ");
+            String name = new Scanner(System.in).nextLine();
+            //add name to arrayList
+            names.add(name);
+        }
+        names.forEach(e-> System.out.println("Name: " + e));
+        System.out.print("Insert old name to update: ");
+        String name = new Scanner(System.in).nextLine();
+        int index = names.indexOf(name);
+        if(index>=0){
+            System.out.print("Insert your new name: ");
+            String newName = new Scanner(System.in).nextLine();
+            //update
+            names.set(index, newName);
+            names.forEach(e-> System.out.println("Name: " + e));
+        } else {
+            System.out.println("Name not found.");
+        }
+    }
+}
+@05
+
+
+
+@06
+package CollectionOfFramework;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class CollectionOfFramework01 {
+    public static void main(String[] args){
+        Set<String> stringSet = new HashSet<>(List.of("Somnang"));
+        //add
+        stringSet.add("Jame");
+        stringSet.add("Jonh");
+        stringSet.add("Jae");
+        //remove by index
+        stringSet.remove("Somnang");
+        System.out.println(stringSet);
+    }
+}
+package CollectionOfFramework;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class CollectionOfFramework02 {
+    public static void main(String[] args){
+        Set<String> stringSet = new HashSet<>(List.of("Somnang"));
+        //add
+        stringSet.add("Jame");
+        stringSet.add("Jonh");
+        stringSet.add("Jae");
+        //remove by index
+        stringSet.remove("Somnang");
+        System.out.println(stringSet);
+    }
+}
+@07
+package CollectionOfFramework;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class CollectionOfFramework02 {
+    public static void main(String[] args){
+        Set<String> products = getAllProductNames("cola");
+        System.out.println(products);
+    }
+    private static Set<String> getAllProductNames(String pName){
+        HashSet<String> hashSet = new HashSet<>(
+                List.of("kele", "pepsi", "milk")
+        );
+        hashSet.add(pName);
+        return hashSet;
+    }
+}
+@08
+package CollectionOfFramework;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class CollectionOfFramework02 {
+    public static void main(String[] args){
+        Set<String> originalName = new HashSet<>(
+                List.of("Somnang", "Sokpheak"));
+        Set<String> names = new HashSet<>(
+                List.of("Som", "Sok"));
+        // remove by using element
+//        names.remove("Sokpheak");
+        // if two or more set are the same
+        if(originalName.containsAll(names)){
+            System.out.println("These sets are the same.");
+        }
+        //remove
+        names.addAll(originalName);
+        System.out.println(names);
+        // check size
+        System.out.println(names.size());
+    }
+}
+@09
+package CollectionOfFramework;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class CollectionOfFramework02 {
+    public static void main(String[] args){
+    Set<Integer> numbers = new TreeSet<>();
+    numbers.add(35);
+    numbers.add(24);
+    numbers.add(-35);
+    numbers.add(0);
+    // remove
+        numbers.remove(35);
+        numbers.removeIf(e->e.equals(0));
+    // e-> lamda expression
+        System.out.println(numbers);
+    }
+}
+@10
+package CollectionOfFramework;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class CollectionOfFramework02 {
+    public static void main(String[] args){
+        Set<String> names = new TreeSet<>();
+        // add element to set
+        names.add("Somnang");
+        names.add("Visal");
+        names.add("Ratha");
+        names.add("Zo");
+        // get element from set
+        for (String name: names){
+            System.out.println("Name: " + name);
+        }
+    }
+}
+@11
+package CollectionOfFramework;
+
+import java.util.*;
+
+public class CollectionOfFramework02 {
+    public static void main(String[] args){
+        // integer is the key, String is value
+        Map<Integer, String> map =
+                new HashMap<>();
+        // add element to map
+        map.put(1, "Apple");
+        map.put(2, "Water");
+        map.put(3, "Drink");
+        map.put(4, null);
+        System.out.println(map);
+        System.out.println(map.size());
+        // remove element
+        map.remove(4);
+        System.out.println(map);
+        // list all key in map
+        Set<Integer> key = map.keySet();
+        System.out.println("All keys: " + key);
+        // get value
+        Collection<String> value = (map.values());
+        System.out.println("All value in map: " + value);
+        System.out.println(map.size());
+    }
+}
+@12
+package CollectionOfFramework;
+
+import java.util.*;
+
+public class CollectionOfFramework02 {
+    public static void main(String[] args){
+        // integer is the key, String is value
+        Map<Integer, String> map =
+                new HashMap<>();
+        // add element to map
+        map.put(1, "Apple");
+        map.put(2, "Water");
+        map.put(3, "Drink");
+        map.put(4, null);
+        map.put(null, null);
+        for (Map.Entry<Integer, String> obj: map.entrySet()){
+            System.out.println(obj);
+//            System.out.println("Key: " + obj.getKey());
+//            System.out.println("Value: " + obj.getValue());
+        }
+        //clear all elements
+        map.clear();
+        System.out.println(map);
+    }
+}
+@13
+package CollectionOfFramework;
+
+import java.util.Hashtable;
+import java.util.Map;
+
+public class CollectionOfFramework03 {
+    public static void main(String[] args) {
+        Map<Integer, String> names = new Hashtable<>();
+        names.put(1,"ze");
+        names.put(2,"za");
+        System.out.println(names);
+    }
+}
+// Hashtable sort letter.
+// Doesn't store null key or value
+@14
+package CollectionOfFramework;
+
+import java.util.Map;
+import java.util.TreeMap;
+
+public class CollectionOfFramework03 {
+    public static void main(String[] args) {
+        Map<Integer, String> names = new TreeMap<>();
+        names.put(1,null);
+        names.put(2,"za");
+        System.out.println(names);
+    }
+}
+// TreeMap stores value but not key.

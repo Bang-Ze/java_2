@@ -1,0 +1,52 @@
+@01
+package ClassAndObjects;
+
+class Math{
+    private int sum;
+    public int sum(int a, int b){
+        return a+b;
+    }
+    public int sum(int...numbers){
+        for(int n:numbers){
+            sum = sum +n;
+        }
+        return sum;
+    }
+}
+
+public class ClassAndObjects01 {
+    public static void main(String[] args) {
+        Math math = new Math();
+        int resultOfSum = math.sum(1,2,3,4,31,34);
+        System.out.println("Result of sum: " + resultOfSum);
+    }
+}
+@02
+package ClassAndObjects;
+
+class Student{
+    private Integer id;
+    private String name;
+    private String email;
+    public void setStudentInfo(Integer studentId, String studentName, String studentEmail){
+        id = studentId;
+        name = studentName;
+        email = studentEmail;
+    }
+    public void getStudentInfo (){
+        System.out.println("Student Id: " + id);
+        System.out.println("Student Name: " + name);
+        System.out.println("Student Email: " + email);
+        System.out.println("\n");
+    }
+}
+public class ClassAndObjects01 {
+    public static void main(String[] args) {
+        Student student1 = new Student();
+        student1.setStudentInfo(1, "neakKruBingo", "bingo@gmail.com");
+        Student student2 = new Student();
+        student2.setStudentInfo(2, "zo", "zo@gmail.com");
+        student1.getStudentInfo();
+        student2.getStudentInfo();
+    }
+}

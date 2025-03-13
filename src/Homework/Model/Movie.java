@@ -1,6 +1,5 @@
 package Homework.Model;
 
-import java.sql.Time;
 import java.util.Set;
 
 public class Movie {
@@ -24,23 +23,14 @@ public class Movie {
         this.duration = mduration;
         this.categories = mCategories;
     }
-//    public void getMovieDetail(){
-//        System.out.println("Movie ID: " + this.id);
-//        System.out.println("Movie UUID: " + this.uuid);
-//        System.out.println("Movie title: " + this.title);
-//        System.out.println("Movie description: " + this.description);
-//        System.out.println("Movie duration: " + this.duration);
-//        System.out.println("Movie categories: " + this.categories);
-//        System.out.println();
-//    }
     @Override
     public String toString() {
         return "Movie " +
-                "id = " + id +
-                ", uuid = '" + uuid + '\'' +
-                ", title = '" + title + '\'' +
-                ", description = '" + description + '\'' +
-                ", publishedDate = " + duration +
+                "id = " + id + '\n' +
+                ", uuid = '" + uuid + '\n' +
+                ", title = '" + title + '\n' +
+                ", description = '" + description + '\n' +
+                ", publishedDate = " + duration + '\n' +
                 ", categories = " + categories;
     }
 }

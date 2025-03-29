@@ -46,6 +46,6 @@ public class Account implements BankingService {
 
     @Override
     public void convertFromRielToDollar(Double reil) {
-        System.out.println("Result in riel: " + (reil/4000) + " riel");
+        System.out.println("Result in dollar: " + (reil/4000) + " dollar");
     }
 }
